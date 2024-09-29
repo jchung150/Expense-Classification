@@ -1,0 +1,34 @@
+@model IEnumerable<expense_classification.Models.ApplicationUser>
+
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Approval Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Email</td>
+            <td>@(user.IsApproved ? "Approved" : "Unapproved")</td>
+            <td>
+                <form asp-action="ToggleApproval" method="post">
+                    <input type="hidden" name="id" value="@user.Id" />
+                    <button type="submit" class="btn @(user.IsApproved ? "btn-warning" : "btn-success")">
+                        @(user.IsApproved ? "Disapprove" : "Approve")
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
