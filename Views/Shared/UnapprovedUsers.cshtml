@@ -1,0 +1,26 @@
+@model IEnumerable<ApplicationUser>
+
+<h2>Unapproved Users</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Approve</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Email</td>
+            <td>
+                <form asp-action="ApproveUser" method="post">
+                    <input type="hidden" name="id" value="@user.Id" />
+                    <button type="submit" class="btn btn-success">Approve</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
