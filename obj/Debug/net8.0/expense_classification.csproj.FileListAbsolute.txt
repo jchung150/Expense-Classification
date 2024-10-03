@@ -263,3 +263,4 @@
 /Users/jcdev/Desktop/myDotNet/expense_classification/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Drawing.Common.dll
 /Users/jcdev/Desktop/myDotNet/expense_classification/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Security.Cryptography.ProtectedData.dll
 /Users/jcdev/Desktop/myDotNet/expense_classification/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Windows.Extensions.dll
+/Users/jcdev/Desktop/myDotNet/expense_classification/bin/Debug/net8.0/CsvHelper.dll

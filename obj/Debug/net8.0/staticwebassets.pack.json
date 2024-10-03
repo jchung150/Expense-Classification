@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/expense_classification.bundle.scp.css"
     },
     {
+      "Id": "/Users/jcdev/Desktop/myDotNet/expense_classification/wwwroot/2022 02.csv",
+      "PackagePath": "staticwebassets/2022 02.csv"
+    },
+    {
       "Id": "/Users/jcdev/Desktop/myDotNet/expense_classification/wwwroot/2023 02.csv",
       "PackagePath": "staticwebassets/2023 02.csv"
     },

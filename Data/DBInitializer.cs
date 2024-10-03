@@ -1,6 +1,7 @@
 using System;
 using expense_classification.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace expense_classification.Data;
 
@@ -13,7 +14,7 @@ public static class DbInitializer
         var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
         // Ensure the database is created
-        context.Database.EnsureCreated();
+        context.Database.Migrate();
 
         // Check if roles exist
         if (!context.Roles.Any())
@@ -55,25 +56,5 @@ public static class DbInitializer
             memberUser.EmailConfirmed = true;
             await userManager.UpdateAsync(memberUser);
         }
-
-        // // Check if users exist
-        // if (!context.Users.Any())
-        // {
-        //     // Create admin user
-        //     var adminUser = new ApplicationUser { UserName = "aa@aa.aa", Email = "aa@aa.aa" };
-        //     await userManager.CreateAsync(adminUser, "P@$$w0rd");
-        //     await userManager.AddToRoleAsync(adminUser, "admin");
-        //     // Set IsApproved and EmailConfirmed
-        //     adminUser.IsApproved = true;
-        //     adminUser.EmailConfirmed = true;
-        //     await userManager.UpdateAsync(adminUser);
-
-        //     // Create member user
-        //     var memberUser = new ApplicationUser { UserName = "mm@mm.mm", Email = "mm@mm.mm" };
-        //     await userManager.CreateAsync(memberUser, "P@$$w0rd");
-        //     await userManager.AddToRoleAsync(memberUser, "member");
-        //     memberUser.EmailConfirmed = true;
-        //     await userManager.UpdateAsync(memberUser);
-        // }
     }
 }

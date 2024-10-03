@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WBWaETevq6I=",
+  "dgSpecHash": "hJqfAUoPCMY=",
   "success": true,
   "projectFilePath": "/Users/jcdev/Desktop/myDotNet/expense_classification/expense_classification.csproj",
   "expectedPackageFiles": [
+    "/Users/jcdev/.nuget/packages/csvhelper/33.0.1/csvhelper.33.0.1.nupkg.sha512",
     "/Users/jcdev/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/jcdev/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/jcdev/.nuget/packages/humanizer.core.af/2.14.1/humanizer.core.af.2.14.1.nupkg.sha512",

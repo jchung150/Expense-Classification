@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "++4JuV+PBbS2XIYAqLmgRKhJuVwshHh+kY7nusOsbDk=",
+  "Hash": "bPph+0rPULPyfgvBUSgenuhqW6ESPfc8mBt5lBI0hMQ=",
   "Source": "expense_classification",
   "BasePath": "_content/expense_classification",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/jcdev/Desktop/myDotNet/expense_classification/obj/Debug/net8.0/scopedcss/projectbundle/expense_classification.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/jcdev/Desktop/myDotNet/expense_classification/wwwroot/2022 02.csv",
+      "SourceId": "expense_classification",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/jcdev/Desktop/myDotNet/expense_classification/wwwroot/",
+      "BasePath": "_content/expense_classification",
+      "RelativePath": "2022 02.csv",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/2022 02.csv"
     },
     {
       "Identity": "/Users/jcdev/Desktop/myDotNet/expense_classification/wwwroot/2023 02.csv",
