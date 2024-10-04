@@ -9,7 +9,7 @@
             <tr>
                 <th>Date</th>
                 <th>Vendor</th>
-                <th>Bucket Name</th>  <!-- Add Bucket Name column -->
+                <th>Bucket Name</th>  
                 <th>Amount</th>
                 <th>Actions</th>
             </tr>
@@ -20,7 +20,7 @@
                 <tr>
                     <td>@transaction.Date.ToShortDateString()</td>
                     <td>@transaction.Vendor</td>
-                    <td>@transaction.BucketName</td>  <!-- Display the BucketName -->
+                    <td>@transaction.BucketName</td>  
                     <td>@transaction.Amount.ToString("C")</td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@transaction.Id" class="btn btn-warning">Edit</a>

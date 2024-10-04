@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("expense_classification")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56ac7bf7aad09a0728ecb179fe09bc02eeb7f71d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7b28d9b614f4286af8b56044f0275c0653f9f1a")]
 [assembly: System.Reflection.AssemblyProductAttribute("expense_classification")]
 [assembly: System.Reflection.AssemblyTitleAttribute("expense_classification")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
