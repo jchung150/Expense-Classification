@@ -1,0 +1,37 @@
+@model IEnumerable<expense_classification.Models.Bucket>
+
+<h2>Manage Buckets</h2>
+<a asp-action="Add" class="btn btn-primary">Add New Bucket</a>
+
+@if (!Model.Any())
+{
+    <p>No buckets available. Add a new bucket to manage.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Vendor</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var bucket in Model)
+        {
+            <tr>
+                <td>@bucket.Name</td>
+                <td>@bucket.Vendor</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@bucket.Id" class="btn btn-warning">Edit</a>
+                    <form asp-action="Delete" asp-route-id="@bucket.Id" method="post" class="d-inline">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

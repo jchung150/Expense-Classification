@@ -1,0 +1,19 @@
+@model expense_classification.Models.Bucket
+
+<h2>Edit Bucket</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Vendor" class="control-label"></label>
+        <input asp-for="Vendor" class="form-control" />
+        <span asp-validation-for="Vendor" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="List" class="btn btn-secondary">Cancel</a>
+</form>

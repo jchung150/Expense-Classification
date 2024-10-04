@@ -1,0 +1,100 @@
+@model IEnumerable<expense_classification.Models.ReportViewModel>
+
+@{
+    ViewData["Title"] = "Expense Report";
+}
+
+<h2>Generate Expense Report</h2>
+
+<form method="post" asp-action="GenerateReport">
+    <div class="form-group">
+        <label for="year">Enter Year:</label>
+        <input type="number" id="year" name="year" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Generate Report</button>
+</form>
+
+@if (Model != null && Model.Any())
+{
+    <h2>Expense Report for @ViewBag.Year</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Bucket Name</th>
+                <th>Total Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.BucketName</td>
+                <td>@item.TotalAmount.ToString("C")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <h3>Expense Breakdown (Pie Chart)</h3>
+    <canvas id="expenseChart" width="400" height="400"></canvas>
+}
+else
+{
+    <p>No data available for this year.</p>
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@if (Model != null && Model.Any())
+{
+<script>
+    // Prepare data for the pie chart
+    var labels = @Html.Raw(Json.Serialize(Model.Select(m => m.BucketName)));
+    var data = @Html.Raw(Json.Serialize(Model.Select(m => m.TotalAmount)));
+
+    var ctx = document.getElementById('expenseChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Expense Breakdown',
+                data: data,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.label + ': $' + tooltipItem.raw.toFixed(2);
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+}

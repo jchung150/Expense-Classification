@@ -28,8 +28,17 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Transactions" asp-action="Upload">Upload</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Transactions" asp-action="List">Transaction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Reports" asp-action="Reports">Report</a>
+                        </li>
                         @if (User.IsInRole("admin"))
                         {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Buckets" asp-action="List">Buckets</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-controller="Admin" asp-action="UnapprovedUsers">Admin Panel</a>
                             </li>
@@ -48,7 +57,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - expense_classification - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - expense_classification - Team Members: Juan Chung(A01353601), Ran Pakr(A01331544) <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
