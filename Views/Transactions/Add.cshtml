@@ -60,5 +60,14 @@
                 });
             }
         });
+
+        // Show alert if the Vendor dropdown is clicked without selecting a Bucket
+        $('#VendorDropdown').focus(function() {
+            var selectedBucket = $('#BucketDropdown').val();
+            if (!selectedBucket) {
+                alert('Please select a Bucket first.');
+                $('#VendorDropdown').blur(); // remove focus from VendorDropdown
+            }
+        });
     });
 </script>
