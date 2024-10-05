@@ -80,6 +80,7 @@ StyleCopReport.xml
 *_h.h
 *.ilk
 *.meta
+*.bin
 *.obj
 *.iobj
 *.pch
