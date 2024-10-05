@@ -98,7 +98,7 @@ namespace expense_classification.Controllers
                 // Process the renamed file
                 var config = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
-                    HasHeaderRecord = false,  // No header
+                    HasHeaderRecord = false,
                     MissingFieldFound = null,
                     BadDataFound = null,
                     IgnoreBlankLines = true
