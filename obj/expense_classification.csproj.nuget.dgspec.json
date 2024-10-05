@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ranpark/CST Lab/COMP4976/Expense-Classification/expense_classification.csproj": {}
+    "/Users/jcdev/Desktop/myDotNet/expense_classification/expense_classification.csproj": {}
   },
   "projects": {
-    "/Users/ranpark/CST Lab/COMP4976/Expense-Classification/expense_classification.csproj": {
+    "/Users/jcdev/Desktop/myDotNet/expense_classification/expense_classification.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ranpark/CST Lab/COMP4976/Expense-Classification/expense_classification.csproj",
+        "projectUniqueName": "/Users/jcdev/Desktop/myDotNet/expense_classification/expense_classification.csproj",
         "projectName": "expense_classification",
-        "projectPath": "/Users/ranpark/CST Lab/COMP4976/Expense-Classification/expense_classification.csproj",
-        "packagesPath": "/Users/ranpark/.nuget/packages/",
-        "outputPath": "/Users/ranpark/CST Lab/COMP4976/Expense-Classification/obj/",
+        "projectPath": "/Users/jcdev/Desktop/myDotNet/expense_classification/expense_classification.csproj",
+        "packagesPath": "/Users/jcdev/.nuget/packages/",
+        "outputPath": "/Users/jcdev/Desktop/myDotNet/expense_classification/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ranpark/.nuget/NuGet/NuGet.Config"
+          "/Users/jcdev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
