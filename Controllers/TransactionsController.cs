@@ -220,10 +220,15 @@ namespace expense_classification.Controllers
             var transaction = await _context.Transactions
                                             .FirstOrDefaultAsync(t => t.Id == id && t.UserId == user.Id);
 
+            if (user == null) 
+            {
+                return Unauthorized();
+            }
             if (transaction == null)
             {
                 return NotFound();
             }
+
 
             // Fetch unique bucket names from the database
             var uniqueBuckets = await _context.Buckets

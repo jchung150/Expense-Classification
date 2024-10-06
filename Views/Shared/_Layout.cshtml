@@ -10,6 +10,8 @@
 </head>
 <body>
     <header>
+        @if (User.Identity.IsAuthenticated)
+        {
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Expense Manager</a>
@@ -34,10 +36,10 @@
                         @if (User.IsInRole("admin"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Buckets" asp-action="List">Buckets</a>
+                                <a class="nav-link text-dark" asp-controller="Buckets" asp-action="List" style="color:blue !important">Buckets</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Admin" asp-action="UnapprovedUsers">User Management</a>
+                                <a class="nav-link text-dark" asp-controller="Admin" asp-action="UnapprovedUsers" style="color:blue !important">User Management</a>
                             </li>
                         }
                     </ul>
@@ -45,6 +47,7 @@
                 </div>
             </div>
         </nav>
+        }
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -54,7 +57,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - expense_classification - Team Members: Juan Chung(A01353601), Ran Park(A01331544) <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 Expense Manager by Juan Chung(A01353601), Ran Park(A01331544) <a asp-area="" asp-controller="Home" asp-action="Privacy"></a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

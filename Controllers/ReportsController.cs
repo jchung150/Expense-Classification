@@ -24,17 +24,17 @@ public class ReportsController : Controller
     {
         ViewBag.Year = year;
 
-        var reportData = _context.Transactions
+        var reportData = await _context.Transactions
             .Where(t => t.Date.Year == year)
-            .AsEnumerable() 
+            .ToListAsync();
+        
+        var groupedData = reportData
             .GroupBy(t => t.BucketName)
             .Select(g => new ReportViewModel
             {
                 BucketName = g.Key,
                 TotalAmount = g.Sum(t => t.Amount)  
-            })
-            .ToList();
-
-        return View("Reports", reportData);
+            });
+        return View("Reports", groupedData);
     }
 }
